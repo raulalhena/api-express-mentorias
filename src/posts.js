@@ -21,7 +21,7 @@ export const createUser = function(req, res) {
   req.on('end', function(){
     
     if(message.search(/Error/)) {
-      res.writeHead(200, contentType);
+      res.writeHead(201, contentType);
       res.end(JSON.stringify({
         message: message,
         user: users.slice(-1)
@@ -56,7 +56,7 @@ export const createPost = function(req, res) {
   req.on('end', function(){
     
     if(message.search(/Error/)) {
-      res.writeHead(200, contentType);
+      res.writeHead(201, contentType);
       res.end(JSON.stringify({
         message: message,
         post: posts.slice(-1)
